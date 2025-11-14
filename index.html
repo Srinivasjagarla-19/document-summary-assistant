@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0b1f" />
+    <title>Document Summary Assistant</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root{
+        --bg-start:#0a0b1f; /* deep navy */
+        --bg-end:#2a0f45;   /* rich purple */
+        --accent-purple:#8E3FFC;
+        --accent-cyan:#2AFAD1;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: radial-gradient(1200px 800px at 20% -10%, rgba(142,63,252,0.25), transparent 60%),
+                    radial-gradient(900px 700px at 90% 110%, rgba(42,250,209,0.18), transparent 60%),
+                    linear-gradient(160deg, var(--bg-start), var(--bg-end));
+        color: #C8C8D0;
+      }
+      .glassmorphic {
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .gradient-button {
+        background-image: linear-gradient(90deg, #6A5AFF, #8E3FFC);
+        transition: all 0.25s ease;
+      }
+      .gradient-button:hover {
+        box-shadow: 0 0 30px rgba(142, 63, 252, 0.55);
+        transform: translateY(-1px);
+      }
+      .gradient-text {
+        background-image: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+      }
+
+      /* Static Background Blobs */
+      .background-container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .background-container div {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(150px);
+        opacity: 0.4;
+      }
+      .blob1 {
+        width: 400px;
+        height: 400px;
+        background: #6a5aff;
+        top: -150px;
+        left: -150px;
+      }
+      .blob2 {
+        width: 350px;
+        height: 350px;
+        background: #8e3ffc;
+        bottom: -150px;
+        right: -100px;
+      }
+       .blob3 {
+        width: 300px;
+        height: 300px;
+        background: #00f2ff;
+        top: 50%;
+        right: 20%;
+        transform: translateY(-50%);
+      }
+
+      /* Custom scrollbar */
+      .custom-scrollbar::-webkit-scrollbar {
+          width: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: linear-gradient(180deg, rgba(142,63,252,0.65), rgba(42,250,209,0.45));
+          border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(180deg, rgba(142,63,252,0.85), rgba(42,250,209,0.65));
+      }
+
+      /* Custom styles for rendered Markdown */
+      .prose-styling h1, .prose-styling h2, .prose-styling h3 {
+        color: white;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+      .prose-styling h2 {
+        font-size: 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 0.5rem;
+        margin-top: 1.5rem;
+      }
+      .prose-styling p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+      .prose-styling ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .prose-styling li {
+        margin-bottom: 0.5rem;
+      }
+      .prose-styling strong {
+        color: #f0f0f0;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
