@@ -2,6 +2,9 @@
 
 A modern, responsive web app that extracts text from PDFs and images and generates clean, structured AI summaries. Built with a premium dark gradient theme, glassmorphic cards, and micro‑interactions for a polished AI SaaS experience.
 
+### 🔗 Live Demo  
+🚀 **https://docsbreif-ai.netlify.app/**
+
 ## ✨ Features
 - Beautiful, responsive UI with dark AI gradient and glassmorphism
 - Drag & drop upload for PDF, PNG, JPG
@@ -12,9 +15,34 @@ A modern, responsive web app that extracts text from PDFs and images and generat
 - Secure environment-based API key usage
 
 ## 🖼️ Screenshots
-> Add screenshots or GIFs here (recommended sizes 1200×675). Example:
-- Home (upload): /screenshots/home.png
-- Summary view: /screenshots/summary.png
+
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/user-attachments/assets/9caa1dac-f1d3-4ae0-8a86-e01778e14dfa" target="_blank">
+        <img src="https://github.com/user-attachments/assets/9caa1dac-f1d3-4ae0-8a86-e01778e14dfa" width="100%" style="border-radius: 10px; padding: 8px;">
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/user-attachments/assets/9e480734-2462-4f86-a4fe-b4347034031e" target="_blank">
+        <img src="https://github.com/user-attachments/assets/9e480734-2462-4f86-a4fe-b4347034031e" width="100%" style="border-radius: 10px; padding: 8px;">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/user-attachments/assets/edbffb13-58c7-487b-a0f4-2fd60260ea04" target="_blank">
+        <img src="https://github.com/user-attachments/assets/edbffb13-58c7-487b-a0f4-2fd60260ea04" width="100%" style="border-radius: 10px; padding: 8px;">
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/user-attachments/assets/80dd5e48-ac5f-41f8-a8df-bd40dd4fcc1a" target="_blank">
+        <img src="https://github.com/user-attachments/assets/80dd5e48-ac5f-41f8-a8df-bd40dd4fcc1a" width="100%" style="border-radius: 10px; padding: 8px;">
+      </a>
+    </td>
+  </tr>
+</table>
+
 
 ## 🧱 Tech Stack
 - React 19, TypeScript 5, Vite 6
