@@ -124,9 +124,3 @@ The production build will be in `dist/`.
 ## ☁️ Deploy
 - Any static host (Vercel, Netlify, GitHub Pages with SPA routing tweaks) can host the `dist/` output
 - Remember to set the `GEMINI_API_KEY` securely in your hosting environment and map it similarly if you proxy requests server-side
-
-## 🤝 Contributing
-PRs and issues are welcome. Please open an issue to discuss major changes first.
-
-## 📝 License
-MIT © 2025 – Your Name
