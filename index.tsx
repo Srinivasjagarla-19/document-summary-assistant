@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { GoogleGenAI } from '@google/genai';
 import { marked } from 'marked';
 
-const API_KEY = process.env.API_KEY;
+// Prefer a global window override, then process.env (build-time), then Vite env fallbacks
+const API_KEY = (typeof window !== 'undefined' && (window as any).__GEMINI_API_KEY as string)
+  || (process.env.API_KEY as string) 
+  || (import.meta as any).env?.VITE_GEMINI_API_KEY 
+  || (import.meta as any).env?.GEMINI_API_KEY;
 
 // --- Helper Functions ---
 const fileToBase64 = (file: File): Promise<string> => new Promise((resolve, reject) => {
